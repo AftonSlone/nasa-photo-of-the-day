@@ -15,7 +15,6 @@ function App() {
       currentDate.getMonth() + 1
     }-${currentDate.getDate()}`
   );
-  console.log(date);
   useEffect(() => {
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`)
