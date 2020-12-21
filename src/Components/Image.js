@@ -1,5 +1,5 @@
-import react from "react";
+import React from "react";
 export default function Image(props) {
   const { img } = props;
-  return <img>{img}</img>;
+  return <img src={img} />;
 }
