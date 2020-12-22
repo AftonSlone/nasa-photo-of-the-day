@@ -4,9 +4,10 @@ import Image from "./Components/Image";
 import Title from "./Components/Title";
 import DateSelector from "./Components/DateSelector";
 import axios from "axios";
+import GlobalStyle from "./GlobalStyle";
 import "./App.css";
 
-function App() {
+function App(props) {
   const currentDate = new Date(); // Javascript date object.
 
   const [photoData, setPhotoData] = useState([]);
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className="App">
+      <GlobalStyle />
       <DateSelector date={date} setDate={setDate} />
       <Title title={photoData.title} />
       <Image img={photoData.url} mediaType={photoData.media_type} />
